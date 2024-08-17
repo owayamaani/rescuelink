@@ -15,8 +15,8 @@ import Volunteer from './components/Volunteer.vue';
 import Resources from './components/Resources.vue';
 
 const callBackend = async (method, ...args) => {
-  const canisterId = 'br5f7-7uaaa-aaaaa-qaaca-cai'; // Replace with your actual canister ID
-  const url = `http://localhost:8000/api/v2/canister/${canisterId}/call`; // Local ICP URL
+  const canisterId = 'br5f7-7uaaa-aaaaa-qaaca-cai'; 
+  const url = `http://localhost:8000/api/v2/canister/${canisterId}/call`; 
   try {
     const response = await axios.post(url, { method, args });
     console.log('Backend response:', response.data);
