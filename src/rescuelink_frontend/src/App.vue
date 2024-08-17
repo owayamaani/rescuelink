@@ -15,8 +15,12 @@ import Volunteer from './components/Volunteer.vue';
 import Resources from './components/Resources.vue';
 
 const callBackend = async (method, ...args) => {
-  const canisterId = 'br5f7-7uaaa-aaaaa-qaaca-cai'; 
-  const url = `http://localhost:8000/api/v2/canister/${canisterId}/call`; 
+  //const canisterId = 'br5f7-7uaaa-aaaaa-qaaca-cai';
+  const canisterId = 'bkyz2-fmaaa-aaaaa-qaaaq-cai';
+ 
+  //const url = `http://localhost:8000/api/v2/canister/${canisterId}/call`; 
+  const url = `http://127.0.0.1:4943/?canisterId=${canisterId}`;
+
   try {
     const response = await axios.post(url, { method, args });
     console.log('Backend response:', response.data);
