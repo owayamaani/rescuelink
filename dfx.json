@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "rescuelink_backend": {
+      "main": "src/rescuelink_backend/main.mo",
+      "type": "motoko"
+    },
+    "rescuelink_frontend": {
+      "dependencies": [
+        "rescuelink_backend"
+      ],
+      "source": [
+        "src/rescuelink_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "rescuelink_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
