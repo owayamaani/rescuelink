@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <h1>ReliefLink - Decentralized Disaster Relief Coordination</h1>
-    <Donate />
+    <div class="main_content">
+      <Donate />
     <Volunteer />
     <Resources />
+    </div>
   </div>
 </template>
 
@@ -33,7 +34,5 @@ const callBackend = async (method, ...args) => {
 </script>
 
 <style scoped>
-h1 {
-  color: #2c3e50;
-}
+
 </style>

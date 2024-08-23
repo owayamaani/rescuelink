@@ -37,6 +37,7 @@
   </script>
   
   <style scoped>
+  
   input {
     margin-right: 10px;
     padding: 5px;
