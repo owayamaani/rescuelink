@@ -34,5 +34,6 @@ const callBackend = async (method, ...args) => {
 </script>
 
 <style scoped>
+@import './components/style.css'
 
 </style>

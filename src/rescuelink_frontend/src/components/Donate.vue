@@ -1,6 +1,6 @@
 
 <template>
-    <section class="donate-section">
+    <section class="C">
       <h1>ReliefLink - Decentralized Disaster Relief Coordination</h1>
       <h2>Donate</h2>
      <div class="donate_content">
