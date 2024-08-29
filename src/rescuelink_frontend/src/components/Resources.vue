@@ -2,7 +2,7 @@
     <section>
       <h2>Resources</h2>
       <input v-model="newResource.resource" placeholder="Resource Description">
-      <button @click="addResource">Add Resource</button>
+      <button class="button" @click="addResource">Add Resource</button>
       <ul>
         <li v-for="resource in resources" :key="resource">{{ resource }}</li>
       </ul>

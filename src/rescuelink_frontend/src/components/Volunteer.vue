@@ -2,7 +2,7 @@
     <section>
       <h2>Register as a Volunteer</h2>
       <input v-model="newVolunteer.name" placeholder="Your Name">
-      <button @click="registerVolunteer">Register</button>
+      <button class="button" @click="registerVolunteer">Register</button>
       <ul>
         <li v-for="volunteer in volunteers" :key="volunteer">{{ volunteer }}</li>
       </ul>
