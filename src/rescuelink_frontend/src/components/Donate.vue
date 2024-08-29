@@ -29,6 +29,7 @@
     },
     methods: {
       async donate() {
+        console.log('Button is clicked');
         await this.$root.callBackend('donate', this.newDonation.name, parseInt(this.newDonation.amount));
         this.newDonation.name = '';
         this.newDonation.amount = 0;
