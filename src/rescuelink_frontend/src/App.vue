@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <div class="main_content">
-      <Donate />
-    <Volunteer />
-    <Resources />
+    <div class="main_content" >
+      <Donate/>
+      <Volunteer/>
+      <Resources/>
     </div>
   </div>
 </template>
@@ -33,7 +33,7 @@ const callBackend = async (method, ...args) => {
 };
 </script>
 
-<style scoped>
-@import './components/style.css'
+<style >
+@import './components/style.css';
 
 </style>

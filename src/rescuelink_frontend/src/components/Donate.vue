@@ -1,12 +1,12 @@
 
 <template>
-    <section class="C">
+    <section>
       <h1>ReliefLink - Decentralized Disaster Relief Coordination</h1>
       <h2>Donate</h2>
      <div class="donate_content">
       <input v-model="newDonation.name" placeholder="Your Name">
       <input v-model="newDonation.amount" type="number" placeholder="Amount">
-      <button @click="donate">Donate</button>
+      <button class="button" @click="donate">Donate</button>
       <ul>
         <li v-for="donation in donations" :key="donation[0]">{{ donation[0] }}: {{ donation[1] }} ICP</li>
       </ul>
@@ -45,7 +45,7 @@
   };
   </script>
   
-  <style scoped>
+  <style >
   @import './style.css';
  
   </style>
