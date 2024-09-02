@@ -49,7 +49,7 @@ import Array "mo:base/Array"; // Import Array module
 // };
 
 actor {
-    //Data structure for the resources
+    //Data structure for the resources(record)
     type Resource = {
         id:Nat;
         content : Text;
@@ -86,14 +86,16 @@ actor {
         return resources;
     };
 
-    //data structure for volunteers
+    //data structure for volunteers(record)
     type Volunteer = {
         id:Nat;
         content: Text;
     };
 
     //define a record to simulate a key-value store
-    //generating new ids for each volunteers
+    //generating new ids for each volunteers 
+    //create an array that will store records
+    //Variable to track the next available Id
     var volunteers : [Volunteer] = [];
     var nextVolId : Nat = 0;
 
@@ -110,15 +112,17 @@ actor {
     };
 
     //function to get volunteer by Id
+    //searches Volunteer array to get volunteer with matching Id
     public query func getVolunteer(id:Nat): async ?Volunteer {
         let result = Array.find(volunteers, func (v: Volunteer) : Bool {v.id == id});
+        //conditional for if volunteer is found and if not
         switch(result) {
             case(?volunteer) return ?volunteer;
             case null {return null;}
         };
     };
     
-    //function to get all volunteers
+    //function to get all volunteers-returns the entire array
     public query func getAllVolunteers(): async [Volunteer]{
         return volunteers;
     };
