@@ -69,7 +69,7 @@ actor {
             content = resourceContent;
         };
         resources := Array.append(resources, [resource]);
-        return "Hello, you have submitted: " # resourceContent # "!";
+        return "Thank you for submitting  "  # resourceContent #  " as a resource";
     };
 
     //Function to get resource by ID
