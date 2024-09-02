@@ -127,4 +127,31 @@ actor {
         return volunteers;
     };
 
+    //defining record for Donations
+    type Donation = {
+        donorName : Text;
+        amount: Nat;
+    };
+    
+    //variable to store donations array
+    var donations: [Donation] = [];
+
+    //functions to add a donation
+
+    public func addDonation(donorName: Text, amount: Nat): async Text {
+        let donation : Donation = {
+            donorName = donorName;
+            amount = amount;
+        };
+        //Appending the new donation to the donations Array
+        donations := Array.append(donations, [donation]);
+        return "Thank you,"# donorName # ",for donating "# Nat.toText(amount) # " to ICP"
+
+    };
+
+    //functions to get all donations
+    public query func getAllDonations(): async [Donation] {
+        return donations;
+    };
+
 }
