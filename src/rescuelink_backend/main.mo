@@ -85,4 +85,42 @@ actor {
     public query func getAllResources(): async [Resource]{
         return resources;
     };
+
+    //data structure for volunteers
+    type Volunteer = {
+        id:Nat;
+        content: Text;
+    };
+
+    //define a record to simulate a key-value store
+    //generating new ids for each volunteers
+    var volunteers : [Volunteer] = [];
+    var nextVolId : Nat = 0;
+
+    //function to enter a new volunteer
+    public func enterVolunteer(volunteerContent : Text) : async Text {
+        let volunteerId = nextVolId;
+        nextVolId += 1;
+        let volunteer : Volunteer = {
+            id = volunteerId;
+            content = volunteerContent;
+        };
+        volunteers := Array.append(volunteers, [volunteer]);
+        return "Thank you "# volunteerContent # ", for registering as a volunteer";
+    };
+
+    //function to get volunteer by Id
+    public query func getVolunteer(id:Nat): async ?Volunteer {
+        let result = Array.find(volunteers, func (v: Volunteer) : Bool {v.id == id});
+        switch(result) {
+            case(?volunteer) return ?volunteer;
+            case null {return null;}
+        };
+    };
+    
+    //function to get all volunteers
+    public query func getAllVolunteers(): async [Volunteer]{
+        return volunteers;
+    };
+
 }
