@@ -140,3 +140,13 @@ li {
   margin-bottom: 5px;
   border-radius: 3px;
 }
+
+#resourceSubmitted{
+  color: var(--green2);
+}
+#volunteerSubmitted{
+  color:var(--green2);
+}
+#donationResponse{
+  color:var(--green2);
+}
